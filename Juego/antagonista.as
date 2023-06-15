@@ -3,22 +3,28 @@
 	import flash.events.Event;
 	import flash.utils.Timer;
 	import flash.events.TimerEvent;
-	
+		
 	public class antagonista extends MovieClip {
 		
 	    private var limite_der: int = 520;
 		private var limite_izq: int = 32;
 		private var dir: Number = 1;
 		private var vel: int = 10;
+		private var velIncremento: int = 1;
 		private var cambia: Timer = new Timer(200,0);
 		private var tipo: Number;
-
-
+		private var lanzar: Timer = new Timer (2000,0);
+		
+		
 		public function antagonista() {
 			
 			addEventListener(Event.ENTER_FRAME, actualiza);
 			cambia.addEventListener(TimerEvent.TIMER, cambia_dir);
 			cambia.start();
+			lanzar.addEventListener(TimerEvent.TIMER, lanza_bala);
+			lanzar.start();
+			
+					
 		}
 		
 		public function cambia_dir(e:TimerEvent){
@@ -41,9 +47,21 @@
 			if (x<=limite_izq){
 				dir = 1;
 			}
+			
+			if (setup.puntos > 0 && setup.puntos % 5 == 0) {
+    			vel += velIncremento; // Aumentar la velocidad del antagonista
+							
+		}}
+		public function lanza_bala(e: TimerEvent){
+			//trace("Lanza bala");
+			var bala_nueva=new bala(x, y);
+			stage.addChild(bala_nueva);
 		}
+		
+}
+
 				
 
 	}
 	
-}
+
