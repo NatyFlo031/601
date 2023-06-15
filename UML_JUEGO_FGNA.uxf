@@ -1,0 +1,50 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>370</x><y>40</y><w>100</w><h>80</h></coordinates><panel_attributes>MovieCLIP
+--
+...
+--
+...</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>20</x><y>130</y><w>260</w><h>200</h></coordinates><panel_attributes>setup
+--
+-private var fondo_new: fondo = new fondo();
+-private var piso_new: piso = new piso();
+-private var protagonista_new:
+      protagonista = new protagonista();
+-private var antagonista_new:
+     	antagonista = new antagonista();
+-static var puntos: Number=0
+-static var puntos_box_new:
+	puntos_box=new puntos_box();
+--
+-public function setup()
+-public function actualiza_puntos(e:Event)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>180</y><w>270</w><h>190</h></coordinates><panel_attributes>protagonista
+--
+-private var izq:Boolean
+-private var der:Boolean
+-private var vel: int
+-private var lim_x_der:int
+-private var limite_x_izq:int
+--
+-public function protagonista()
+-public function motor (e:Event):void
+-public function controles ()
+-public function keydown(e:KeyboardEvent):void
+-public function keyup(e: KeyboardEvent):void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>460</y><w>210</w><h>90</h></coordinates><panel_attributes>bala
+--
+-private var vel: Number
+--
+-public function bala(pos_x, pos_y)
+-public function mover(e: Event)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>130</x><y>360</y><w>280</w><h>210</h></coordinates><panel_attributes>antagonista
+--
+-private var limite_der: int
+-private var limite_izq: int
+-private var dir: Number
+-private var vel: int
+-private var cambia: Timer = new Timer(200,0);
+-private var tipo: Number;
+-private var lanzar: Timer = new Timer (2000,0);
+-private var velIncremento: int
+--
+-public function antagonista()
+-public function cambia_dir(e:TimerEvent)
+-public function actualiza(e:Event)
+-public function lanza_bala(e: TimerEvent)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>110</y><w>130</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;120;110;10</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>110</y><w>100</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>80;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>110</y><w>120</w><h>270</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;250;100;10</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>320</y><w>100</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>80;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>230</y><w>250</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>230;10;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>400</y><w>120</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>100;70;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>110</y><w>90</w><h>370</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;350;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>10</y><w>240</w><h>30</h></coordinates><panel_attributes>Flores Galvan Natalia Abigail 601</panel_attributes><additional_attributes></additional_attributes></element></diagram>
